@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1></h1>
+
+    <ul class="menu"></ul>
+
+    <video src="" id="videoplayer"></video>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ocean</th>
+                <th>Average Depth</th>
+                <th>Maximum Depth</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pacific Ocean</td>
+                <td>4,280 m</td>
+                <td>10,911 m</td>
+            </tr>
+            <tr>
+                <td>Atlantic Ocean</td>
+                <td>3,646 m</td>
+                <td>8,446 m</td>
+            </tr>
+        </tbody>
+        
+    </table>
+
+    <script>
+    let h1 = document.querySelector('h1');
+    h1.innerText = 'okten';
+
+    let msg = 'lorem ipsum';
+    let p = document.createElement('p');
+    p.innerText = msg; 
+    document.body.append(p);
+    h1.insertAdjacentElement('afterend', p);
+
+//  let users = [
+// { name: 'John', age: 25, status: true },
+// { name: 'Alice', age: 30, status: false },
+// { name: 'Bob', age: 40, status: true },
+// { name: 'Eve', age: 35, status: false },
+// { name: 'Charlie', age: 28, status: true },
+// { name: 'Diana', age: 22, status: false },
+// { name: 'Frank', age: 38, status: true },
+// { name: 'Grace', age: 29, status: false },
+// { name: 'Henry', age: 33, status: true },
+// { name: 'Ivy', age: 27, status: false },
+// { name: 'Kate', age: 32, status: true }
+// ];
+// users.push({ name: 'Dima', age: 50, status: true });
+
+// let menu = document.querySelector('.menu');
+// for (const user of users) {
+//    let li = document.createElement('li');
+//    li.innerText = `${user.name}, ${user.status ? 'true' : 'false'}`;
+//    menu.append(li);
+// }
+
+
+let menu = document.querySelector('.menu');
+fetch ('https://jsonplaceholder.typicode.com/users')
+    .then(value => value.json()) 
+    .then(users => {
+        for (const user of users) {
+            let li = document.createElement('li');
+            li.innerText = user.name;
+            menu.append(li);
+        }
+    });
+
+// navigator.geolocation.getCurrentPosition(position => console.log(position));
+
+navigator.mediaDevices.getUserMedia({video: true})
+    .then(stream => {
+        let videoplayer = document.getElementById('videoplayer');
+        videoplayer.srcObject = stream;
+        videoplayer.play();
+    })
+
+</script>
+<script src="main.js"></script>
+<script src="module1.js"></script>
+    
+</body>
+</html>
