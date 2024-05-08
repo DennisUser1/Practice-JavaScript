@@ -181,3 +181,41 @@ removeCourse("Vue"); // 'Курс із таким ім'ям не знайден�
 
 updateCourse("HTML", "Next.js");
 console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+
+//! ===========================
+
+// function multiply() {
+//   let total = 1;
+
+//   for (const argument of arguments) {
+//     total *= argument;
+//   }
+
+//   /*
+//   multiply(1, 2, 3)
+//   arguments = [1, 2, 3]
+
+//   1. argument = 1
+//     total = 1 * 1
+//   2. argument = 2
+//     total = 1 * 2 = 2
+//   2. argument = 3
+//     total = 2 * 3 = 6
+//   */
+
+//   return total;
+// }
+
+// console.log(multiply(1, 2, 3)); //  6
+// console.log(multiply(1, 2, 3, 4)); //  24
+// console.log(multiply(1, 2, 3, 4, 5)); //  120
+
+//! ===========================
+
+// for (let i = 1; i <= 10; i += 1) {
+//   if (i === 5) continue;
+//   console.log(i);
+// }
+
+//! ===========================
+
