@@ -226,3 +226,39 @@ console.log(account.getTransactionTotal(TRANSACTIONS.WITHDRAW));
 // admin.sayHello();
 
 // console.log(admin)
+
+//! ======================================================
+// Як додати об'єкт в масив об'єктів?
+// const stones = [
+//   { name: "Смарагд", price: 1300, quantity: 4 },
+//   { name: "Діамант", price: 2700, quantity: 3 },
+//   { name: "Сапфір", price: 400, quantity: 7 },
+// ];
+
+// // Якщо потрібно додати, наприклад:
+// const stone = { name: "Щебінь", price: 200, quantity: 2 };
+
+// stones.push(stone);
+
+// console.log(stones);
+
+//! ======================================================
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   const valueArray = [];
+//   for (const product of products) {
+//     if (!(propName in product)) return [];
+//     valueArray.push(product[propName]);
+//   }
+//   return valueArray;
+// }
+
+// console.log(getAllPropValues("name4"));
+
+//! ======================================================

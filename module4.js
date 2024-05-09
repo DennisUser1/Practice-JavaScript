@@ -87,8 +87,8 @@ function getRoundedNumber(num) {
   // return Number(num.toFixed(1));
 }
 
-const bmi = calcBMI("88,3", "1.75");
-console.log(bmi); // 28.8
+const bmi1 = calcBMI("88,3", "1.75");
+console.log(bmi1); // 28.8
 
 const bmi2 = calcBMI("90,9", "1,50");
 console.log(bmi2);
