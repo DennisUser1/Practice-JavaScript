@@ -104,29 +104,29 @@
 
 //! 1 варіант - викликати ф-цію toggleModalOpen тільки тоді, коли модалка відкрита
 
-// const refs = {
-//   overlay: document.getElementById("overlay"),
-//   modalCloseBtn: document.getElementById("modalCloseBtn"),
-//   openModalBtn: document.getElementById("openModalBtn"),
-// };
+const refs = {
+  overlay: document.getElementById("overlay"),
+  modalCloseBtn: document.getElementById("modalCloseBtn"),
+  openModalBtn: document.getElementById("openModalBtn"),
+};
 
-// const openClass = "open";
+const openClass = "open";
 
-// refs.openModalBtn.addEventListener("click", toggleModalOpen);
-// refs.overlay.addEventListener("click", toggleModalOpen);
-// refs.modalCloseBtn.addEventListener("click", toggleModalOpen);
-// window.addEventListener("keydown", closeModalOnESC);
+refs.openModalBtn.addEventListener("click", toggleModalOpen);
+refs.overlay.addEventListener("click", toggleModalOpen);
+refs.modalCloseBtn.addEventListener("click", toggleModalOpen);
+window.addEventListener("keydown", closeModalOnESC);
 
-// function toggleModalOpen() {
-//   document.body.classList.toggle(openClass);
-// }
+function toggleModalOpen() {
+  document.body.classList.toggle(openClass);
+}
 
-// function closeModalOnESC(event) {
-//   if (event.code === "Escape" && document.body.classList.contains(openClass)) {
-//     toggleModalOpen();
-//     console.log("Натиснули Escape");
-//   }
-// }
+function closeModalOnESC(event) {
+  if (event.code === "Escape" && document.body.classList.contains(openClass)) {
+    toggleModalOpen();
+    console.log("Натиснули Escape");
+  }
+}
 
 //! 2 варіант - вручну прибрати клас
 
@@ -138,7 +138,9 @@
 
 // const openClass = "open";
 
-// refs.openModalBtn.addEventListener("click", toggleModalOpen);
+// refs.openModalBtn.addEventListener("click", toggleModalOpen, {
+//     once: true,
+// });
 // refs.overlay.addEventListener("click", toggleModalOpen);
 // refs.modalCloseBtn.addEventListener("click", toggleModalOpen);
 // window.addEventListener("keydown", closeModalOnESC);
